@@ -5,6 +5,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDate;
+
 @Entity
 @Getter
 @Setter
@@ -16,8 +18,8 @@ public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private long nationalIdentity;
     private String firstName;
     private String lastName;
-    private int birthYear;
+    private LocalDate dateOfBirth;
+    private String nationalIdentity;
 }
